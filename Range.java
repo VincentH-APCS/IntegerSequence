@@ -21,9 +21,9 @@ public class Range implements IntegerSequence{
   }
 
   public int next(){
-    try{ this.hasNext();
-    } catch (NoSuchElementException e){
-      System.out.println("There is no Next Element");
+    if(current > end){
+      throw new NoSuchElementException("You have reached the end, " + end
+      + " . There is no element afterwards");
     }
     current = current + 1;
     return current - 1;
