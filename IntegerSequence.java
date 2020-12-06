@@ -1,10 +1,12 @@
+import java.util.NoSuchElementException;
+
 public interface IntegerSequence{
   boolean hasNext();
   int next();
   int length();
   void reset();
 }
-import java.util.NoSuchElementException;
+
 public class Range implements IntegerSequence{
   private int start, end, current;
 
@@ -27,7 +29,7 @@ public class Range implements IntegerSequence{
 
   public int next(){
     try{ this.hasNext();
-    } catch (NoSuchElementException){
+    } catch (NoSuchElementException e){
       System.out.println("There is no Next Element");
     }
     current = current++;
