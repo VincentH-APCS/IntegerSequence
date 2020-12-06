@@ -9,8 +9,10 @@ public static void main(String[] args){
     }
   }
   System.out.println();
+  r.reset();
   System.out.println(r.next());
-//  System.out.println(r.next());
+  System.out.println(r.next());
+  System.out.println(r.length());
 }
 
 }
