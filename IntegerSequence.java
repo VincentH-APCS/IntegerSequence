@@ -1,4 +1,3 @@
-import java.util.NoSuchElementException;
 
 public interface IntegerSequence{
   boolean hasNext();
@@ -6,3 +5,5 @@ public interface IntegerSequence{
   int length();
   void reset();
 }
+
+//:]
