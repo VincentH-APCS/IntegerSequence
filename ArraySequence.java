@@ -4,6 +4,7 @@ public class ArraySequence implements IntegerSequence{
   private int[] data;
 
   public ArraySequence(int[] other){
+    data = new int[other.length];
     for(int i = 0; i < other.length; i++){
       data[i] = other[i];
     }
@@ -17,11 +18,11 @@ public class ArraySequence implements IntegerSequence{
     return data.length;
   }
   public boolean hasNext(){
-    return currentIndex =< data.length;
+    return currentIndex < data.length;
   }
   public int next(){
     if(currentIndex > data.length){
-      throw new NoSuchElementException("You have reached the end, " + end
+      throw new NoSuchElementException("You have reached the end, " + data.length
       + " . There is no element afterwards");
     }
     currentIndex = currentIndex + 1;
