@@ -4,6 +4,10 @@ public class Range implements IntegerSequence{
   private int start, end, current;
 
   public Range(int start, int end){
+    if(start > end){
+      throw new IllegalArgumentException("The Starting value" + start +
+      "cannot be greater than the end value" +end);
+    }
     this.start = start;
     this.end = end;
     this.current = start;
