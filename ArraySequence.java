@@ -30,9 +30,11 @@ public class ArraySequence implements IntegerSequence{
   }
   public ArraySequence(IntegerSequence otherseq){
     data = new int[otherseq.length()];
+    int count = 0;
     otherseq.reset();
     while(otherseq.hasNext()){
-      data[i] = otherseq.next();
+      data[count] = otherseq.next();
+      count = count + 1;
     }
     otherseq.reset();
   }
