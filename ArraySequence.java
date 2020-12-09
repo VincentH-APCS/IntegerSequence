@@ -28,4 +28,12 @@ public class ArraySequence implements IntegerSequence{
     currentIndex = currentIndex + 1;
     return data[currentIndex - 1];
   }
+  public ArraySequence(IntegerSequence otherseq){
+    data = new int[otherseq.length()];
+    otherseq.reset();
+    while(otherseq.hasNext()){
+      data[i] = otherseq.next();
+    }
+    otherseq.reset();
+  }
 }
