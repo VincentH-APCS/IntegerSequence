@@ -21,7 +21,7 @@ public class ArraySequence implements IntegerSequence{
     return currentIndex < data.length;
   }
   public int next(){
-    if(currentIndex > data.length){
+    if(currentIndex > data.length - 1){
       throw new NoSuchElementException("You have reached the end, " + data.length
       + " . There is no element afterwards");
     }
